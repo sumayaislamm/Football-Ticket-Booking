@@ -1,3 +1,6 @@
+-- Football Ticket Booking System
+-- Assignment SQL Queries
+
 --------------- Query - 01 -----------------
 
 SELECT match_id, fixture, base_ticket_price
@@ -16,11 +19,12 @@ WHERE full_name ILIKE 'Tanvir%'
 
 --------------- Query - 03 -----------------
 
-SELECT 
- booking_id,
- user_id,
- match_id,
-         COALESCE(payment_status, 'Action Required') AS systematic_status
+
+SELECT
+    booking_id,
+    user_id,
+    match_id,
+    COALESCE(payment_status, 'Action Required') AS systematic_status
 FROM Bookings
 WHERE payment_status IS NULL;
 
